@@ -4,7 +4,7 @@ public class GameLogic {
   
   BackGround bk;
   Bar bar;
-  
+  Pipe pipes;
 
   
 
@@ -14,6 +14,7 @@ public class GameLogic {
     bk = new BackGround();
     bar = new Bar();
     Globals.birds.add(new Bird(Game.width/2, Game.height/2, 5, 0));
+    pipes = new Pipe();
 
   }
   public void gameLoop(){
@@ -23,6 +24,7 @@ public class GameLogic {
         bird.draw();
     }
     Globals.coin.draw();
+    pipes.draw();
     Globals.camX += 5;
 
     Game.canvas.drawString("Coins: " + Globals.score, 10, 10);
