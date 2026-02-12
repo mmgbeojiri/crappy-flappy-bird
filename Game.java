@@ -1,9 +1,6 @@
-import javax.imageio.ImageIO;
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.io.IOException;
-import java.net.URL;
+import javax.swing.*;
 
 
 /**
@@ -37,7 +34,7 @@ public class Game extends JPanel implements KeyListener, MouseMotionListener, Mo
     }
     public void update(Graphics g){
         try {
-            Thread.sleep(30);
+            Thread.sleep(16);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
