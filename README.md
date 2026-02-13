@@ -20,3 +20,6 @@ press click
 
 # Update 7: Attempt To Have Coin Not Spawn In Ground
 ![alt text](image-6.png)
+
+# Update 8: Rework For Better Future Multiplayer Compatibilty
+![alt text](image-7.png)

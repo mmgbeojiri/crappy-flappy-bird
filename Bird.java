@@ -10,6 +10,7 @@ public class Bird {
     double frame = 0;
     int id;
     boolean  alive = true;
+    boolean responsive = true;
 
 
 
@@ -64,7 +65,10 @@ public class Bird {
 
         if (x - Globals.camX < 0) {
             try {
+                if (responsive) {
                 Globals.onscreenBirds--;
+                }
+                responsive = false;
             } catch (Exception e) {
                 System.err.println("Couldn't remove bird!");
             }

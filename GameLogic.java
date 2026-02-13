@@ -17,6 +17,10 @@ public class GameLogic {
     bk = new BackGround();
     bar = new Bar();
     Globals.birds.add(new Bird(Game.width/2, Game.height/2, 0, 0));
+    /*for (int i = 0; i < Game.width; i+= 100) {
+        
+      Globals.birds.add(new Bird(0+i, Game.height/2, 0, 1));
+    }*/
     pipes = new Pipe();
 
   }
