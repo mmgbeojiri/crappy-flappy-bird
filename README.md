@@ -17,3 +17,6 @@ press click
 
 # Update 6: Added End Screen
 ![alt text](image-5.png)
+
+# Update 7: Attempt To Have Coin Not Spawn In Ground
+![alt text](image-6.png)

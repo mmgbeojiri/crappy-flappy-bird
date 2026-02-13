@@ -3,7 +3,7 @@ import javax.swing.*;
 
 public class Coin{
   int x1 = Game.width;
-  int y1 = randInt(0, Game.height);
+  int y1 = randInt(0, (int) Globals.barGround-100);
   Image image;
   
   Coin(){
@@ -31,7 +31,7 @@ public class Coin{
 
     if (drawX1 <= 0) {
       x1 += (Game.width);
-      y1 = randInt(0, (int) Globals.barGround);
+      y1 = randInt(0, (int) Globals.barGround-100);
       Globals.coinAllowedToCollect = true;
     };
 
