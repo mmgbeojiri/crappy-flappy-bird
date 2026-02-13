@@ -8,3 +8,9 @@ press click
 
 # Update 3: Added Good Looking Pipes
 ![long pipes](image-2.png)
+
+# Update 4: Added Collidable Pipes
+![Collidable Pipes](image-3.png)
+
+# Update 5: Added Title Screen
+![alt text](image-4.png)

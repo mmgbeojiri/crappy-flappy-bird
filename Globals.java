@@ -12,4 +12,5 @@ public class Globals {
     public static boolean coinAllowedToCollect = true;
 
     public static int score = 0;
+    public static boolean levelStart = false;
 }

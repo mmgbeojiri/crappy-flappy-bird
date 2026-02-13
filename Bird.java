@@ -9,7 +9,7 @@ public class Bird {
     Image image;
     double frame = 0;
     int id;
-    
+    boolean  alive = true;
 
 
 
@@ -20,15 +20,29 @@ public class Bird {
         this.dx = dx;
         this.id = id;
     }
+    void setVel(double dx, double dy) {
+        this.dx = dx;
+        this.dy = dy;
+    }
+   
 
     double distToCoin() {
         return (Math.sqrt(Math.pow((x - Globals.camX)-Globals.coinX, 2) + Math.pow((y - Globals.camY)-Globals.coinY, 2)));
     }
-
+    void die() {
+            dx = 0;
+            alive = false;
+            
+    }
     void draw() {
         x += dx;
         y += dy;
+        if (Globals.levelStart) {
         dy += 0.5;
+        if (alive && Mouse.leftPressed) {
+            dy = -5;
+        }
+        }
         frame += 0.1;
         this.image = new ImageIcon("./JavaLessonGraphicsLesson-7/images/yellow/Flap"+(int)Math.floor((frame % 3)+1) +".png").getImage();
         Game.canvas.drawImage(
@@ -39,12 +53,10 @@ public class Bird {
         24,
         null);
 
-        if (Mouse.leftPressed) {
-            dy = -5;
-        }
+        
 
         if (y > Globals.barGround) {
-            dx = 0;
+            die();
             dy=0;
             y = Globals.barGround;
         }
@@ -57,8 +69,16 @@ public class Bird {
             }
         }
 
+
+
         if (distToCoin() < 50 && Globals.coinAllowedToCollect) {
             Globals.coin.collect();
+        }
+
+        if (Math.abs((x - Globals.camX)-Globals.coinX) < 50) {
+            if (Math.abs((y - Globals.camY)-Globals.coinY) > 100) {
+                die();
+            }
         }
 
         
