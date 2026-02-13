@@ -13,4 +13,7 @@ public class Globals {
 
     public static int score = 0;
     public static boolean levelStart = false;
+    public static boolean levelEnd = false;
+
+    public static int onscreenBirds = 0;
 }

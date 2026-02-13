@@ -19,6 +19,7 @@ public class Bird {
         this.image = new ImageIcon("./JavaLessonGraphicsLesson-7/images/yellow/Flap1.png").getImage();
         this.dx = dx;
         this.id = id;
+        Globals.onscreenBirds++;
     }
     void setVel(double dx, double dy) {
         this.dx = dx;
@@ -61,9 +62,9 @@ public class Bird {
             y = Globals.barGround;
         }
 
-        if (x<0) {
+        if (x - Globals.camX < 0) {
             try {
-                Globals.birds.remove(id);
+                Globals.onscreenBirds--;
             } catch (Exception e) {
                 System.err.println("Couldn't remove bird!");
             }

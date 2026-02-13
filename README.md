@@ -14,3 +14,6 @@ press click
 
 # Update 5: Added Title Screen
 ![alt text](image-4.png)
+
+# Update 6: Added End Screen
+![alt text](image-5.png)
